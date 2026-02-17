@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<script>
+  if (!localStorage.getItem("admin")) {
+    window.location.href = "admin-login.html";
+  }
+</script>
+
+<nav class="navbar">
+  <h2>Admin Panel</h2>
+  <div>
+    <a href="index.html">User</a>
+    <a href="#" id="logoutBtn">Logout</a>
+  </div>
+</nav>
+
+<div class="form-container">
+  <h2>Post Job</h2>
+
+  <form id="jobForm">
+    <input type="text" name="title" placeholder="Job Title" required>
+    <input type="text" name="company" placeholder="Company Name" required>
+    <input type="text" name="location" placeholder="Location" required>
+
+    <select name="workType">
+      <option>Remote</option>
+      <option>Hybrid</option>
+      <option>Onsite</option>
+    </select>
+
+    <textarea name="description" placeholder="Job Description"></textarea>
+
+    <button type="submit">Post Job</button>
+  </form>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apply Job</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h2>JobPortal</h2>
+  <a href="index.html">User</a>
+</nav>
+
+<div class="form-container">
+  <h2>Apply for Job</h2>
+
+  <form id="applyForm">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="resumeLink" placeholder="Resume Link" required>
+
+    <input type="hidden" name="jobId" id="jobId">
+
+    <button type="submit">Submit Application</button>
+  </form>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("jobId").value = params.get("id");
+</script>
+
+<script src="js/app.js"></script>
+</body>
+</html>

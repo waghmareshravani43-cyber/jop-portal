@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h2>JobPortal</h2>
+  <div>
+    <a href="index.html">User</a>
+    <a href="admin-login.html">Admin</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Available Jobs</h2>
+
+  <div class="filters">
+    <select id="locationFilter">
+      <option value="">All Locations</option>
+      <option>Bangalore</option>
+      <option>Mumbai</option>
+      <option>Delhi</option>
+    </select>
+
+    <select id="workTypeFilter">
+      <option value="">All Types</option>
+      <option>Remote</option>
+      <option>Hybrid</option>
+      <option>Onsite</option>
+    </select>
+
+    <button onclick="loadJobs()">Filter</button>
+  </div>
+
+  <div id="jobs"></div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
